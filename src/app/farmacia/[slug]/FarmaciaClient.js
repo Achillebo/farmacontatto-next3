@@ -1,0 +1,56 @@
+"use client";
+
+import Image from "next/image";
+import FarmaciaAccordion from "@/components/FarmaciaAccordion";
+import MapClient from "@/components/MapClient";
+import InviaMail from "@/components/InviaMail";
+import SingolaInserzioneSb from "@/components/SingolaInserzioneSb";
+import envelopeIcon from "@/icone/envelope-circle-check-solid.svg";
+
+export default function FarmaciaClient({ farma }) {
+  return (
+    <div className="container my-5">
+      <div className="row g-4">
+
+        <div className="col-lg-9">
+          <article className="p-4">
+
+            <h1>{farma.titolo_inserzione}</h1>
+
+            <Image
+              src={`/immagini/farmacie-in-vendita-${farma.immagine}.jpg`}
+              width={100}
+              height={100}
+              alt=""
+            />
+
+            <p>{farma.testo_inserzione}</p>
+
+            {farma.tipo_inserzione == 1 && (
+              <FarmaciaAccordion farma={farma} />
+            )}
+
+            {farma.lat && (
+              <MapClient
+                lat={Number(farma.lat)}
+                lng={Number(farma.lng)}
+              />
+            )}
+
+            <InviaMail
+              riffarma={farma.rif_farm}
+              rif_titolo_inserzione={farma.titolo_inserzione}
+              rif_tipo="info_ins"
+            />
+
+          </article>
+        </div>
+
+        <div className="col-lg-3">
+          <SingolaInserzioneSb />
+        </div>
+
+      </div>
+    </div>
+  );
+}

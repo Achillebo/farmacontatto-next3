@@ -1,0 +1,27 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Farmacontatto S.r.l.",
+  "url": "https://farmacontatto.it",
+  "logo": "https://farmacontatto.it/static/media/logo.97fc862edfee0537b15b.png",
+  "email": "achille.bonzini@farmacontatto.it",
+  "description": "Farmacontatto S.r.l. è specializzata nella compravendita di farmacie in Italia, offrendo servizi di intermediazione e consulenza.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Via Giambellino, 119",
+    "addressLocality": "Milano",
+    "addressRegion": "MI",
+    "postalCode": "20146",
+    "addressCountry": "IT"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "email": "achille.bonzini@farmacontatto.it",
+    "telephone": "+39-327-7147618",
+    "contactType": "servizio clienti",
+    "availableLanguage": ["Italian"]
+  },
+  "sameAs": [
+    "https://www.linkedin.com/company/farmacontatto"
+  ]
+}

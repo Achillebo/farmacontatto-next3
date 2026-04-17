@@ -1,0 +1,204 @@
+/* stylelint-disable stylistic/selector-list-comma-newline-after */
+
+.blog-header-logo {
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif/*rtl:Amiri, Georgia, "Times New Roman", serif*/;
+    font-size: 2.25rem;
+  }
+  
+  .blog-header-logo:hover {
+    text-decoration: none;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif/*rtl:Amiri, Georgia, "Times New Roman", serif*/;
+  }
+  
+  .flex-auto {
+    flex: 0 0 auto;
+  }
+  
+  .h-250 { height: 250px; }
+  @media (min-width: 768px) {
+    .h-md-250 { height: 250px; }
+  }
+  
+  /* Pagination */
+  .blog-pagination {
+    margin-bottom: 4rem;
+  }
+  
+  /*
+   * Blog posts
+   */
+  .blog-post {
+    margin-bottom: 4rem;
+  }
+  .blog-post-meta {
+    margin-bottom: 1.25rem;
+    color: #727272;
+  }
+
+  .my-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .my-container img {vertical-align: middle;}
+  
+  .my-container .content {
+    position: absolute;
+    bottom: 0;
+    background: rgb(0, 0, 0); /* Fallback color */
+    background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+  }
+  .my-div {
+    font-size: 1.1em;
+    color: #7a7a7a;
+  }
+  .my-citazione {
+    font-weight: 700;
+    font-size: 1em;
+    color:#2F4F4F;
+    font-style: italic;
+  }
+  .my-AncorLink {
+    color:#7a7a7a !important;
+    font-style: italic;
+    text-align: left !important;
+    text-decoration: none;
+    font-weight: 450;
+  }
+  a {
+    color:#7a7a7a !important;
+  /*  font-style: italic; */
+    text-align: left !important;
+    text-decoration: none !important;
+    font-weight: 450;
+  }
+  .btn-href {
+    color:#ffffff !important;
+  }
+  .btn-href-black {
+    font-weight: 350;
+    color: #000000 !important;
+  }
+  .my-text-dark {
+    font-weight: 450;
+    color:#2F4F4F !important;
+  }
+  .my-card-text {
+    color:#7a7a7a !important;
+  }
+  .my-trattativa-rosso {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+    font-weight: 450;
+    color:#ffffff !important;
+    background-color:#ff0022 !important;
+  }
+  .my-trattativa-verde {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+    font-weight: 450;
+    color:#ffffff !important;
+    background-color:#8fc963 !important;
+  }
+  .my-trattativa-azzurro {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+    font-weight: 450;
+    color:#ffffff !important;
+    background-color:#54B4D3 !important;
+  }
+  .leaflet-container {
+    width: 100%;
+    height: 45vh;
+  }
+  .accordion-button:not(.collapsed) {
+    background-color: #f2f2f2 !important; 
+    color: #212529;
+  }
+  .accordion-button:focus {
+    box-shadow: none;
+  }
+  .accordion-button:focus {
+    box-shadow: none !important;
+    border-color: rgba(0,0,0,.125) !important;
+  }
+  .my-modal {
+    width: 90vw;    /* Occupy the 90% of the screen width */
+    max-width: 90vw;
+  }
+  .my-a {
+      color:#999999 !important;
+      text-align: left !important;
+      text-decoration: none !important;
+      font-weight: 450;
+  }
+  .my-link {
+    color:#2F4F4F !important;
+    text-decoration: underline;
+
+}
+  .my-footer-li {
+    color:#999999 !important;
+  }
+  .my-footer-ul {
+    color:#999999 !important;
+  }
+  .my-footer-a {
+    color:#999999 !important;
+  }
+
+
+  .contattaci-btn {
+  position: fixed;
+  top: 85px;
+  z-index: 999;
+}
+
+/* BOTTONE CONTATTACI   Inizio */
+/* XL */
+@media (min-width: 1200px) {
+  .contattaci-btn {
+    left: 25px;
+  }
+}
+
+/* LG */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .contattaci-btn {
+    left: 35px;
+  }
+}
+
+/* MD */
+@media (min-width: 768px) and (max-width: 991px) {
+  .contattaci-btn {
+    right: 35px;
+  }
+}
+
+/* SM e XS */
+@media (max-width: 767px) {
+  .contattaci-btn {
+    right: 35px;
+  }
+}
+/* BOTTONE CONTATTACI   Fine */
+/* Colonna fissa in alto   Inizio */
+.sticky-sidebar {
+  position: sticky;
+  top: 80px; /* meglio del 200 se hai navbar */
+  align-self: flex-start;
+}
+
+.sticky-sidebar2 {
+  position: sticky;
+  top: 400px; /* meglio del 200 se hai navbar */
+  align-self: flex-start;
+}
+/* Colonna fissa in alto   Fine */
