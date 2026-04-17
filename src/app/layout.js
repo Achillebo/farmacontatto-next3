@@ -1,5 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
+import "leaflet/dist/leaflet.css";
 import "./globals.css";
+
 import Navbar1 from "@/components/Navbar1";
 import Providers from "@/components/Providers";
 import Footer from "@/components/Footer";

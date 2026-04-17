@@ -13,9 +13,7 @@ function getFarmacia(slug) {
 export const dynamicParams = false;
 
 export async function generateStaticParams() {
-  const all = getAllFarmacie();
-
-  return all
+  return getAllFarmacie()
     .filter((f) => f?.url_pagina)
     .map((f) => ({
       slug: f.url_pagina,
@@ -25,9 +23,16 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }) {
   const farma = getFarmacia(params.slug);
 
+  if (!farma) {
+    return {
+      title: "Farmacia non trovata",
+      description: "",
+    };
+  }
+
   return {
-    title: farma?.titolo_inserzione || "Farmacia",
-    description: (farma?.testo_inserzione || "").slice(0, 160),
+    title: farma.titolo_inserzione,
+    description: (farma.testo_inserzione || "").slice(0, 160),
   };
 }
 
