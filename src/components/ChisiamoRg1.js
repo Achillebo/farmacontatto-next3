@@ -7,7 +7,7 @@ export const ChisiamoRg1 = () => {
           <div className="col-12 p-4 d-flex flex-column align-items-center">
             
             <h2 className="mb-2 text-primary-emphasis">
-              Qualche veloce informazione su di noi
+              Qualche veloce informazione su di noi prova
             </h2>
 
           </div>
