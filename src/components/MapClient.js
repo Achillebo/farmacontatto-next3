@@ -1,54 +1,50 @@
 "use client";
 
-import { useEffect } from "react";
-import L from "leaflet";
-import { MapContainer, TileLayer, Circle } from "react-leaflet";
+import { useEffect, useState } from "react";
+import dynamic from "next/dynamic";
 import "leaflet/dist/leaflet.css";
 
-export default function MapClient({
-  lat,
-  lng,
-  zoom = 12,
-  raggio = 1000,
-}) {
-  // FIX ICONE LEAFLET (OBBLIGATORIO PER VERCEL)
-  useEffect(() => {
-    delete L.Icon.Default.prototype._getIconUrl;
+// 🔥 IMPORT SOLO CLIENT SIDE
+const MapContainer = dynamic(
+  () => import("react-leaflet").then((m) => m.MapContainer),
+  { ssr: false }
+);
 
-    L.Icon.Default.mergeOptions({
-      iconRetinaUrl:
-        "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png",
-      iconUrl:
-        "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png",
-      shadowUrl:
-        "https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png",
-    });
+const TileLayer = dynamic(
+  () => import("react-leaflet").then((m) => m.TileLayer),
+  { ssr: false }
+);
+
+const Circle = dynamic(
+  () => import("react-leaflet").then((m) => m.Circle),
+  { ssr: false }
+);
+
+export default function MapClient({ lat, lng, zoom = 13, raggio = 1000 }) {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
   }, []);
+
+  if (!mounted) return null;
 
   return (
     <div style={{ height: "300px", width: "100%" }}>
       <MapContainer
         center={[lat, lng]}
         zoom={zoom}
+        style={{ height: "100%", width: "100%" }}
         scrollWheelZoom={false}
-        doubleClickZoom={false}
-        touchZoom={false}
-        boxZoom={false}
-        style={{ height: "300px", width: "100%" }}
       >
-        <TileLayer
-          attribution='&copy; OpenStreetMap contributors'
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        />
+        <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
 
         <Circle
           center={[lat, lng]}
           radius={raggio}
           pathOptions={{
             color: "#6082B6",
-            fillColor: "#6082B6",
             fillOpacity: 0.15,
-            weight: 2,
           }}
         />
       </MapContainer>
