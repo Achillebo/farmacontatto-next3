@@ -9,10 +9,6 @@ export const ChisiamoRg1 = () => {
             <h2 className="mb-2 text-primary-emphasis">
               Qualche veloce informazione su di noi prova
             </h2>
-                              <h2 className="mb-2 text-primary-emphasis">
-              bbb
-            </h2>
-
           </div>
         </div>
       </div>
