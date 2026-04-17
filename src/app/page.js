@@ -18,6 +18,13 @@ export default function Home() {
       <HomeHead />
       <HomeRg1 />
       <HomeRg2 />
+
+                  <h2 className="mb-2 text-primary-emphasis">
+              aaa
+            </h2>
+
     </>
+
+    
   );
 }
