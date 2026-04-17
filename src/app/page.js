@@ -20,7 +20,7 @@ export default function Home() {
       <HomeRg2 />
 
                   <h2 className="mb-2 text-primary-emphasis">
-              aaa
+              bbb
             </h2>
 
     </>
