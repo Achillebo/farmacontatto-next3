@@ -5,8 +5,9 @@ import Link from "next/link";
 export const ConsigliRg2 = () => {
   return (
     <>
-      <div className="row">
-        <div className="my-container p-4">
+<div className="container-fluid p-3">
+  <div className="row">
+    <div className="col-12">
 
           <div className="row pb-0 p-5 align-items-center"
             style={{ backgroundImage: "linear-gradient(180deg, #F7F9FC, #FFFFFF)" }}
@@ -58,6 +59,7 @@ export const ConsigliRg2 = () => {
               </div>
             </div>
           </div>
+        </div>
         </div>
       </div>
     </>
